@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Permisos de Autenticación</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script
+      src="https://cdn.ethers.io/lib/ethers-5.2.umd.min.js"
+      type="application/javascript"
+    ></script>
+  </head>
+  <body
+    class="bg-gray-100 flex flex-col items-center justify-center min-h-screen"
+  >
+    <div class="bg-white p-8 rounded-lg shadow-lg w-full max-w-lg">
+      <h1 class="text-3xl font-semibold mb-6 text-center">
+        Permisos de Autenticación
+      </h1>
+      <button
+        id="connectButton"
+        class="bg-blue-500 text-white px-4 py-2 rounded-md w-full mb-4"
+      >
+        Conectar MetaMask
+      </button>
+      <div id="walletAddress" class="text-gray-700 mb-4"></div>
+
+      <!-- Sección de Votación -->
+      <div class="mb-6">
+        <input
+          id="idCandidato"
+          type="number"
+          placeholder="ID del Candidato"
+          class="border border-gray-300 px-4 py-2 rounded-md w-full mb-2"
+        />
+        <button
+          id="votarButton"
+          class="bg-green-500 text-white px-4 py-2 rounded-md w-full mb-4"
+        >
+          Votar
+        </button>
+      </div>
+
+      <!-- Sección de Candidatos -->
+      <button
+        id="candidatosButton"
+        class="bg-yellow-500 text-white px-4 py-2 rounded-md w-full mb-4"
+      >
+        Mostrar Candidatos
+      </button>
+      <div id="candidatosInfo" class="text-gray-700 mb-6">
+        <table id="candidatosTable" class="w-full border border-gray-300">
+          <thead>
+            <tr>
+              <th class="border-b p-2">ID</th>
+              <th class="border-b p-2">Nombre</th>
+              <th class="border-b p-2">Votos</th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- Las filas de candidatos se agregarán aquí -->
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Sección de Total de Votos -->
+      <button
+        id="totalVotosButton"
+        class="bg-purple-500 text-white px-4 py-2 rounded-md w-full mb-4"
+      >
+        Mostrar Total de Votos
+      </button>
+      <div id="totalVotosInfo" class="text-gray-700 mb-6"></div>
+
+      <!-- Sección de Verificación de Voto -->
+      <button
+        id="verificarVotoButton"
+        class="bg-red-500 text-white px-4 py-2 rounded-md w-full mb-4"
+      >
+        Verificar Voto
+      </button>
+      <div id="verificarVotoInfo" class="text-gray-700 mb-6"></div>
+    </div>
+    <script src="src/script.js"></script>
+  </body>
+</html>

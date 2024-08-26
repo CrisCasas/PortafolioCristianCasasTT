@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Permisos de Autenticación</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script
+      src="https://cdn.ethers.io/lib/ethers-5.2.umd.min.js"
+      type="application/javascript"
+    ></script>
+  </head>
+  <body
+    class="bg-gray-100 text-gray-900 flex items-center justify-center min-h-screen"
+  >
+    <div class="bg-white p-8 rounded shadow-md w-full max-w-md">
+      <h1 class="text-2xl font-bold mb-6 text-center">
+        Conectar MetaMask y Leer Contrato
+      </h1>
+      <button
+        id="connectButton"
+        class="w-full bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+      >
+        Conectar MetaMask
+      </button>
+      <div id="contractData" class="mt-6">
+        <h2 class="text-lg font-semibold">Datos del Contrato</h2>
+        <p id="nombrePersonaje" class="mt-2">
+          Nombre del Personaje: <span class="text-gray-600">---</span>
+        </p>
+        <p id="ultimoRequestId" class="mt-2">
+          Último Request ID: <span class="text-gray-600">---</span>
+        </p>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

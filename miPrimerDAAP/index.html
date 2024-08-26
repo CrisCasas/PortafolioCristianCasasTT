@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DAAP1 - Interacción con Contrato Inteligente</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script
+      src="https://cdn.ethers.io/lib/ethers-5.2.umd.min.js"
+      type="application/javascript"
+    ></script>
+  </head>
+  <body
+    class="bg-gray-100 flex flex-col items-center justify-center min-h-screen"
+  >
+    <div class="bg-white p-8 rounded-lg shadow-lg w-full max-w-md">
+      <h1 class="text-2xl font-bold mb-4">
+        Interacción con Contrato Inteligente
+      </h1>
+
+      <div class="mb-4">
+        <button
+          id="conectarBilletera"
+          class="bg-blue-500 text-white py-2 px-4 rounded"
+        >
+          Conectar Metamask
+        </button>
+      </div>
+
+      <div class="mb-4">
+        <input
+          id="nuevoTexto"
+          type="text"
+          placeholder="Nuevo texto"
+          class="border border-gray-300 p-2 rounded w-full"
+        />
+        <button
+          id="almacenarTexto"
+          class="bg-green-500 text-white py-2 px-4 rounded mt-2"
+        >
+          Almacenar Texto
+        </button>
+      </div>
+
+      <div class="mb-4">
+        <button
+          id="consultarTexto"
+          class="bg-yellow-500 text-white py-2 px-4 rounded"
+        >
+          Consultar Texto
+        </button>
+        <p id="textoConsultado" class="mt-2"></p>
+      </div>
+
+      <div>
+        <button
+          id="consultarPropietario"
+          class="bg-red-500 text-white py-2 px-4 rounded"
+        >
+          Consultar Propietario
+        </button>
+        <p id="propietario" class="mt-2"></p>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

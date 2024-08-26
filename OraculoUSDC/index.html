@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Interacción con Contrato Inteligente</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script
+      src="https://cdn.ethers.io/lib/ethers-5.2.umd.min.js"
+      type="application/javascript"
+    ></script>
+  </head>
+  <body class="p-8 bg-gray-100">
+    <div class="max-w-lg mx-auto bg-white p-6 rounded-lg shadow-lg">
+      <h1 class="text-2xl font-semibold mb-4">
+        Interacción con Contrato Inteligente
+      </h1>
+
+      <button
+        id="connectButton"
+        class="bg-blue-500 text-white px-4 py-2 rounded"
+      >
+        Conectar MetaMask
+      </button>
+
+      <div id="walletAddress" class="mt-4 hidden text-green-600"></div>
+
+      <div id="status" class="mt-4 text-red-600"></div>
+
+      <div id="data" class="mt-4">
+        <label for="decimals" class="block font-medium mb-1">Decimales:</label>
+        <input
+          id="decimals"
+          type="text"
+          readonly
+          class="w-full p-2 border border-gray-300 rounded mb-4"
+        />
+
+        <label for="description" class="block font-medium mb-1"
+          >Descripción:</label
+        >
+        <input
+          id="description"
+          type="text"
+          readonly
+          class="w-full p-2 border border-gray-300 rounded mb-4"
+        />
+
+        <label for="latestAnswer" class="block font-medium mb-1"
+          >Última Respuesta:</label
+        >
+        <input
+          id="latestAnswer"
+          type="text"
+          readonly
+          class="w-full p-2 border border-gray-300 rounded mb-4"
+        />
+
+        <label for="latestTimestamp" class="block font-medium mb-1"
+          >Última Marca de Tiempo:</label
+        >
+        <input
+          id="latestTimestamp"
+          type="text"
+          readonly
+          class="w-full p-2 border border-gray-300 rounded mb-4"
+        />
+
+        <label for="version" class="block font-medium mb-1">Versión:</label>
+        <input
+          id="version"
+          type="text"
+          readonly
+          class="w-full p-2 border border-gray-300 rounded mb-4"
+        />
+      </div>
+
+      <button
+        id="refreshButton"
+        class="bg-green-500 text-white px-4 py-2 rounded mt-4 hidden"
+      >
+        Actualizar
+      </button>
+
+      <div id="updateStatus" class="mt-4 text-blue-600"></div>
+      <!-- Mensaje de actualización -->
+    </div>
+    <script src="src/script.js"></script>
+  </body>
+</html>

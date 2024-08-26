@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Autenticación con Ethereum</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.ethers.io/lib/ethers-5.2.umd.min.js" type="application/javascript"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-gray-100 flex items-center justify-center h-screen">
+    <div class="bg-white p-8 rounded-lg shadow-lg w-80">
+        <h1 class="text-2xl font-bold mb-4">Autenticación con Ethereum</h1>
+        <button id="connectWallet" class="bg-blue-500 text-white py-2 px-4 rounded mb-4 w-full">Conectar Billetera</button>
+        <div id="userInfo" class="hidden">
+            <p id="adminAddress" class="mb-2"></p>
+            <input type="text" id="userAddress" placeholder="Dirección del usuario" class="border p-2 rounded mb-2 w-full">
+            <button id="checkUser" class="bg-green-500 text-white py-2 px-4 rounded mb-2 w-full">Verificar Usuario</button>
+            <p id="userStatus" class="mb-2"></p>
+            <input type="text" id="userName" placeholder="Nombre del usuario" class="border p-2 rounded mb-2 w-full">
+            <button id="registerUser" class="bg-yellow-500 text-white py-2 px-4 rounded mb-2 w-full">Registrar Usuario</button>
+            <button id="removeUser" class="bg-red-500 text-white py-2 px-4 rounded w-full">Eliminar Usuario</button>
+        </div>
+    </div>
+    <script src="src/script.js"></script>
+</body>
+</html>

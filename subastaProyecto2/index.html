@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Autenticación con Contrato Inteligente</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script
+      src="https://cdn.ethers.io/lib/ethers-5.2.umd.min.js"
+      type="application/javascript"
+    ></script>
+  </head>
+  <body
+    class="bg-gray-100 flex flex-col items-center justify-center min-h-screen"
+  >
+    <div class="w-full max-w-4xl p-6 bg-white shadow-md rounded-lg">
+      <h1 class="text-2xl font-bold mb-4">
+        Interacción con Contrato Inteligente
+      </h1>
+      <button
+        id="connectWallet"
+        class="bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600"
+      >
+        Conectar Metamask
+      </button>
+      <div id="walletInfo" class="mt-4"></div>
+
+      <div class="mt-6">
+        <h2 class="text-xl font-semibold mb-2">Crear Subasta</h2>
+        <input
+          id="bienDigital"
+          type="text"
+          placeholder="Bien Digital"
+          class="border p-2 mb-2 w-full"
+        />
+        <input
+          id="precioMinimo"
+          type="number"
+          placeholder="Precio Mínimo (en wei)"
+          class="border p-2 mb-2 w-full"
+        />
+        <input
+          id="tiempoLimite"
+          type="number"
+          placeholder="Tiempo Límite (en segundos)"
+          class="border p-2 mb-2 w-full"
+        />
+        <button
+          id="crearSubasta"
+          class="bg-green-500 text-white py-2 px-4 rounded hover:bg-green-600"
+        >
+          Crear Subasta
+        </button>
+      </div>
+
+      <div class="mt-6">
+        <h2 class="text-xl font-semibold mb-2">Ofertar</h2>
+        <input
+          id="subastaId"
+          type="number"
+          placeholder="ID de la Subasta"
+          class="border p-2 mb-2 w-full"
+        />
+        <input
+          id="oferta"
+          type="number"
+          placeholder="Oferta (en wei)"
+          class="border p-2 mb-2 w-full"
+        />
+        <button
+          id="ofertar"
+          class="bg-yellow-500 text-white py-2 px-4 rounded hover:bg-yellow-600"
+        >
+          Hacer Oferta
+        </button>
+      </div>
+
+      <div class="mt-6">
+        <h2 class="text-xl font-semibold mb-2">Detalles de la Subasta</h2>
+        <input
+          id="idSubasta"
+          type="number"
+          placeholder="ID de la Subasta"
+          class="border p-2 mb-2 w-full"
+        />
+        <button
+          id="mostrarDetalles"
+          class="bg-gray-500 text-white py-2 px-4 rounded hover:bg-gray-600"
+        >
+          Mostrar Detalles
+        </button>
+        <table
+          id="detallesSubasta"
+          class="mt-4 w-full border border-gray-300 rounded-lg mb-6"
+        >
+          <thead class="bg-gray-200">
+            <tr>
+              <th class="px-4 py-2 border-b">Campo</th>
+              <th class="px-4 py-2 border-b">Valor</th>
+            </tr>
+          </thead>
+          <tbody id="detallesSubastaBody">
+            <!-- Los detalles se llenarán aquí -->
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

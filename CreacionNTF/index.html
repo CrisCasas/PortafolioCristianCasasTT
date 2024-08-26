@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Permisos de Autenticación</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script
+      src="https://cdn.ethers.io/lib/ethers-5.2.umd.min.js"
+      type="application/javascript"
+    ></script>
+  </head>
+  <body
+    class="bg-gray-100 flex flex-col items-center justify-center min-h-screen p-4"
+  >
+    <div class="bg-white p-6 rounded-lg shadow-lg max-w-md w-full">
+      <h1 class="text-2xl font-bold mb-4 text-center">
+        Permisos de Autenticación
+      </h1>
+      <button
+        id="connectButton"
+        class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600"
+      >
+        Conectar Wallet
+      </button>
+      <div id="status" class="mt-4 text-center"></div>
+      <p id="wallet-address" class="mt-2 text-center text-gray-600">
+        Dirección de la billetera: No conectada
+      </p>
+      <div id="contractActions" class="mt-6 hidden">
+        <h2 class="text-xl font-semibold mb-2">Interacción con el Contrato</h2>
+        <div class="mb-4">
+          <label for="recipientAddress" class="block text-gray-700"
+            >Dirección del destinatario:</label
+          >
+          <input
+            type="text"
+            id="recipientAddress"
+            class="w-full px-3 py-2 border border-gray-300 rounded"
+            placeholder="Ingrese la dirección del destinatario"
+          />
+        </div>
+        <div class="mb-4">
+          <label for="nftURI" class="block text-gray-700">URI del NFT:</label>
+          <input
+            type="text"
+            id="nftURI"
+            class="w-full px-3 py-2 border border-gray-300 rounded"
+            placeholder="Ingrese el URI del NFT"
+          />
+        </div>
+        <button
+          id="createNFTButton"
+          class="bg-green-500 text-white px-4 py-2 rounded hover:bg-green-600"
+        >
+          Crear NFT
+        </button>
+      </div>
+    </div>
+    <script src="src/script.js"></script>
+  </body>
+</html>
